@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="v_password" type="password">
+    <button onclick="pass(event)">Show</button>
+    <br><br>
+    <input type="password">
+    <button onclick="pass(event)">Show</button>
+</body>
+</html>
+<script>
+    let password = document.getElementById('v_password');
+    
+    function pass(){
+        if(password.type == "password"){
+            password.type = "text"
+
+        }else{
+            password.type = "password"
+        }
+    }
+</script>

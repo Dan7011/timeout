@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="pass">
+        <input id="password" type="password">
+        <button onclick="showPass(event)">Show</button>
+
+    </div>
+
+
+    <input id="c_password" type="password">
+    <button>show</button><br><br>
+
+
+    <button onclick="something('daniel')">Argument/Parameter</button>
+    <button onclick="showEvent(event)">Event</button>
+</body>
+
+</html>
+<script>
+    //The value passed into a functon when it is been invocked or called is
+    function something(errm, uuu) {
+        console.log(errm + uuu);
+    }
+
+    function showEvent(ev) {
+        console.log(ev.target);
+        ev.target.style.backgroundColor = "blue"
+        ev.target.innerHTML = "Text Changed"
+    }
+
+    let password = document.getElementById("password")
+    let c_password = document.getElementById("c_password")
+
+    function showPass() {
+        if (password.type == "password") {
+            password.type = "text"
+        } else {
+            password.type = "password"
+        }
+    }
+</script>
